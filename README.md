@@ -84,5 +84,14 @@ For Costco health supplements, such cs Calcium, VC, etc, expect these basic ones
 - Gather 20 sample health supplements (img, name, function, daily usage,function in Chinese, daily usage in Chinese )
 
 - Create seeds with sample health supplements
-- ......
+- Feature Implementation
+- Bug fixes
+
+- DEMO DAY
+
+## Nice-to-haves
+- filter by different option for the list view
+- logged in user can add new health supplements
+- Forgot password functionality
+
 
