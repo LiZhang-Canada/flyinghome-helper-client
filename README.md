@@ -68,7 +68,9 @@ For Costco health supplements, such cs Calcium, VC, etc, expect these basic ones
 **POST /users/register**
 **POST /users/login**
 
-**GET /users/list**
+**POST /list**
+**GET /list**
+
 
 
 ## Roadmap
@@ -93,5 +95,7 @@ For Costco health supplements, such cs Calcium, VC, etc, expect these basic ones
 - filter by different option for the list view
 - logged in user can add new health supplements
 - Forgot password functionality
+
+- 
 
 
