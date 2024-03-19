@@ -55,7 +55,7 @@ For Costco health supplements, such cs Calcium, VC, etc, expect these basic ones
 - My List page (upper part is item name/total quantity table, lower part is relative/item name/quantity table)
 
 ### Mockups
-![handdraw_design](http://localhost:3000/handdraw_design.jpeg)
+![handdraw_design](handdraw_design.jpeg)
 
 ### Data Structure
 ![Sql-data](Sql-data.png)
