@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Project Title
+Flyinghome Helper
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+For new immigrants, when flying home, it can help them take gifts (health supplements) for relatevies in home country.
+ 
+### Problem
 
-In the project directory, you can run:
+For Costco health supplements, such cs Calcium, VC, etc, expect these basic ones, I don’t know the functions of them, which is good for heart, which is good for bone. Each time, if I need buy some for relatives in my home country, I researched the functions on the website for each of them. And later for a while, I forgot totally. Also, for seniors in my home country, they can’t read English when they get the health supplements and don’t know the daily usage. 
 
-### `npm start`
+### User Profile
+- my relatives can check the functions and daily usage by themselves in Chinese
+- if they want me take something when I back to home country, they can send me health supplements lists directly
+- I can get a total sum for each of item and buy in Costco
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Features
+**user here means my relatives**
+- As a user, I can see a list of health supplements (advanced: can filter by function area: heart/bone/..., also filter by senior/kid/men/women)
+- As a user, I can click each item image, check the functions and daily usage
+- As a user, if I click "translate into Chinese", I can check the functions and daily usage in Chinese
+- As a user, I can add item into order cart
+- As a user, I can send the order cart to someone(must be registered username) who help to buy and take home
+**logged in user here means me/my husband**
+- As a logged in user, I can check my order list (for each item, total number) which was sent by relatives
+- As a logged in user, if I finished one item shopping, I can update the status to done
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Implementation
 
-### `npm test`
+### Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- JSX
+- MySQL
+- Express
+- Client libraries: 
+    - react
+    - react-router
+    - axios
+- Server libraries:
+    - knex
+    - express
 
-### `npm run build`
+### APIs
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- No external APIs will be used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Sitemap
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Home page (Health Supplements List page)
+- Health Supplements Detail page
+- Shopping cart page
+- Register
+- Login
+- My List page (upper part is item name/total quantity table, lower part is relative/item name/quantity table)
 
-### `npm run eject`
+### Mockups
+![handdraw_design](http://localhost:3000/handdraw_design.jpeg)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Data Structure
+![Sql-data](Sql-data.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Endpoints
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**GET /healthSupplements**
+**GET /healthSupplements/:id**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**POST /users/register**
+**POST /users/login**
 
-## Learn More
+**GET /users/list**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Roadmap
 
-### Code Splitting
+- Create client
+    - react project with routes and boilerplate pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Create server
+    - express project with routing, with placeholder 200 responses
 
-### Analyzing the Bundle Size
+- Create migrations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Gather 20 sample health supplements (img, name, function, daily usage,function in Chinese, daily usage in Chinese )
 
-### Making a Progressive Web App
+- Create seeds with sample health supplements
+- ......
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
