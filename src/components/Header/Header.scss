@@ -1,0 +1,99 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles//partials/mixins" as *;
+@use "../../styles//partials/global" as *;
+
+.header {
+  background-color: $primaryColorThree;
+
+  &__content-main-wrap {
+    max-width: 63rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      width: 90%;
+      height: 11.625rem;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .header-logo-link {
+    display: block;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    @include tablet {
+      margin: 0 1.47rem 0 0;
+      padding: 1.8rem 0;
+    }
+    @include desktop {
+      width: 48.25rem;
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    width: 80px;
+    height: 80px;
+    @include tablet {
+      width: 8.0625rem;
+      height: 1.875rem;
+    }
+  }
+
+  &__nav {
+    min-width: 15rem;
+    height: 3rem;
+    @include tablet {
+      min-width: 0;
+      height: 4.18rem;
+      line-height: 4.18rem;
+    }
+  }
+
+  .header-list {
+    @include flex-center;
+
+    &__item {
+      width: 50%;
+      text-align: center;
+      height: 1.75rem;
+      line-height: 1.75rem;
+
+      @include tablet {
+        width: auto;
+        height: 2.1875rem;
+        line-height: 2.1875rem;
+      }
+    }
+
+    &__link {
+      font-size: 0.6875rem;
+      display: block;
+      color: $cloud;
+      width: 80%;
+      height: 1.75rem;
+      margin: 1rem auto;
+      border-radius: 1.25rem;
+
+      @include tablet {
+        font-size: 0.8125rem;
+        margin: 1.8rem 0 0 0;
+        width: auto;
+        padding: 0 0.9375rem;
+        height: 2.1875rem;
+      }
+
+      &--active {
+        color: $white;
+        background-color: $black;
+      }
+
+      &:hover {
+        color: $white;
+        text-decoration: underline $lightgrey;
+      }
+    }
+  }
+}

@@ -1,9 +1,32 @@
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HealthSupplementsPage from "./pages/HealthSupplementsPage/HealthSupplementsPage";
+import HealthSupplementDetailPage from "./pages/HealthSupplementDetailPage/HealthSupplementDetailPage";
+import Header from "./components/Header/Header";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Login from "./pages/Login/Login";
+import Signup from "./pages/Signup/Signup";
+
+import AuthProvider from "./context/auth-context";
 
 function App() {
   return (
     <div className="App">
-        <p>test 中文</p>
+            <AuthProvider>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HealthSupplementsPage />} />
+          <Route path="/healthsupplements" element={<HealthSupplementsPage />} />
+          <Route path="/healthsupplements/:id" element={<HealthSupplementDetailPage />} />
+
+          <Route path="/mylist" element={<Dashboard />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+
+        </Routes>
+        {/* <Footer /> */}
+      </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
