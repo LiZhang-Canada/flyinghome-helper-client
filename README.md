@@ -20,7 +20,7 @@ For Costco health supplements, such cs Calcium, VC, etc, expect these basic ones
 - As a user, I can click each item image, check the functions and daily usage
 - As a user, if I click "translate into Chinese", I can check the functions and daily usage in Chinese
 - As a user, I can add item into order cart
-- As a user, I can send the order cart to someone(must be registered username) who help to buy and take home
+- As a user, I can send the order cart to someone(must be registered user) who help to buy and take home
 **logged in user here means me/my husband**
 - As a logged in user, I can check my order list (for each item, total number) which was sent by relatives
 - As a logged in user, if I finished one item shopping, I can update the status to done

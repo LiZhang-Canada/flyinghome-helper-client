@@ -1,0 +1,35 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles//partials/mixins" as *;
+@use "../../styles//partials/global" as *;
+
+.items-list {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+
+    &__item {
+        list-style: none;
+        width: 50%;
+
+        @include tablet{
+            width: calc(33% - 1rem);
+        }
+
+        @include desktop{
+            width: calc(25% - 1rem);
+        }
+    }
+
+    &__img {
+        width: 120px;
+        height: 120px;
+    @include tablet{
+        width: 160px;
+        height: 160px;
+    }
+    }
+}

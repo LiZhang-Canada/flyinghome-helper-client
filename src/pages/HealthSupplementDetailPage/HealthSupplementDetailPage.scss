@@ -1,0 +1,29 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles//partials/mixins" as *;
+@use "../../styles//partials/global" as *;
+
+.add-cart-wrapper{
+    text-align: center;
+    &__quantity{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__icon{
+        height: 30px;
+        width: 30px;
+    }
+    &__input{
+        width: fit-content;
+        text-align: center;
+        font-weight: 700;
+    }
+    &__button{
+        width: 10rem;
+        border-radius: 20px;
+        font-weight: 700;
+        padding: 1rem auto;
+    }
+
+}
