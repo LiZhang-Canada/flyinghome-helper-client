@@ -1,7 +1,14 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles//partials/mixins" as *;
 @use "../../styles//partials/global" as *;
+.items-list-wrapper{
 
+    margin: 0 auto;
+    max-width: 63rem;
+    @include tablet{
+        width: 90%;
+    }
+}
 .items-list {
 
     display: flex;

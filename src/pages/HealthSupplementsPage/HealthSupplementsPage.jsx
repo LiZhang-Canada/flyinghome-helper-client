@@ -26,6 +26,7 @@ function HealthSupplementsPage(){
       }
 
     return (
+        <main className="items-list-wrapper">
         <ul className="items-list">
         {items.map((item) => (
           
@@ -37,6 +38,7 @@ function HealthSupplementsPage(){
           
         ))}
       </ul>
+      </main>
     );
 }
 
