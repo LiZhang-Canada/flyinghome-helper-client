@@ -17,7 +17,7 @@ function Header(){
                 <Link to='/signup'>
                     <img className='header__icons' src={account} alt="account" />
                 </Link>
-                <Link to='/mylist'>
+                <Link to='/shoppingcart'>
                     <img className='header__icons' src={shoppingbag} alt="shopping-bag"></img>
                 </Link>
                 </div>

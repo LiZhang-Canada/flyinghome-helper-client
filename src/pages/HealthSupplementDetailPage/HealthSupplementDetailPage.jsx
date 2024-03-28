@@ -43,7 +43,6 @@ function HealthSupplementDetailPage() {
   }
 
   function handleSubmit(){
-    console.log(typeof(`${params.id}_quantity`));
     sessionStorage.setItem(`${params.id}_quantity`,quantity);
   }
 

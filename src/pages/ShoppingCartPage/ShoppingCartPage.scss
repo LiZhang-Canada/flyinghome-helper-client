@@ -1,0 +1,57 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles//partials/mixins" as *;
+@use "../../styles//partials/global" as *;
+
+.shopping-cart-wrapper{
+
+    &__item, &__title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    }
+    &__img{
+        width: 40px;
+        height: 40px;
+    }
+
+    &__actions{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__icon{
+        width: 20px;
+        height: 20px;
+    }
+
+    &__input{
+        width: 2rem;
+    }
+
+    &__cancel{
+        width: 45%;
+        margin-right: 1rem;
+    
+        @include tablet {
+          width: fit-content;
+        }
+        :hover {
+          color: $primaryColorTwo;
+          border-color: $primaryColorTwo;
+        }
+    }
+    &__confirm{
+        width: 45%;
+        @include tablet {
+          width: fit-content;
+        }
+        :hover {
+          color: $primaryColorTwo;
+          background-color: $primaryColorTwo;
+        }
+    }
+
+}
