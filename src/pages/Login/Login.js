@@ -21,7 +21,7 @@ function Login() {
       });
 
       sessionStorage.setItem("token", response.data.token);
-      navigate("/mylist");
+      navigate("/mydashboard");
     } catch (error) {
       setError(error.response.data);
     }
@@ -29,7 +29,7 @@ function Login() {
 
   useEffect(() => {
     if (session) {
-      navigate("/mylist");
+      navigate("/mydashboard");
     }
   }, []);
 

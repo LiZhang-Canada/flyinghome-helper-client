@@ -1,0 +1,20 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles//partials/mixins" as *;
+@use "../../styles//partials/global" as *;
+
+.table{
+
+
+    &__img{
+        width: 30px;
+        height: 30px;
+    }
+
+    &__sum{
+        border-bottom: 2px solid $primaryColorTwo;
+    }
+
+    &__itemdone{
+        text-decoration: line-through;
+    }
+}

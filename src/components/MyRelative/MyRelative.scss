@@ -1,0 +1,20 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles//partials/mixins" as *;
+@use "../../styles//partials/global" as *;
+
+.myrelative{
+    &__item{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    margin: 1rem;
+    border: 1px solid $primaryColorTwo;
+    // width: fit-content;
+}
+
+ &__email{
+    padding-right: 1rem;
+    border-right: 1px solid $primaryColorTwo;
+    justify-self: center;
+ }
+}

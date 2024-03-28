@@ -20,9 +20,9 @@ function App() {
           <Route path="/healthsupplements" element={<HealthSupplementsPage />} />
           <Route path="/healthsupplements/:id" element={<HealthSupplementDetailPage />} />
           <Route path="/shoppingcart" element={<ShoppingCartPage />} />
-          
 
-          <Route path="/mylist" element={<Dashboard />} />
+
+          <Route path="/mydashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
 

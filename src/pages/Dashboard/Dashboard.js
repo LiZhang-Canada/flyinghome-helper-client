@@ -4,30 +4,42 @@ import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../../context/auth-context.js";
+import MyRelative from "../../components/MyRelative/MyRelative";
+import MyList from "../../components/MyList/MyList";
 
 function Dashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const { session, setSession } = useContext(AuthContext);
+  const [isRelativeClicked, setIsRelativeClicked] = useState(false);
+  const [isListClicked, setIsListClicked] = useState(false);
 
   const logout = () => {
     sessionStorage.removeItem("token");
     setSession(null);
   };
 
+  const handleClickRelative = () => {
+    setIsRelativeClicked(true);
+    setIsListClicked(false);
+}
+const handleClickList = () => {
+  setIsRelativeClicked(false);
+  setIsListClicked(true);
+}
+
+
   useEffect(() => {
     const login = async () => {
       const token = sessionStorage.getItem("token");
       if (!token) return;
 
-
       // Get the data from the API
       try {
-        const response = await axios.get("http://localhost:8080/mylist", {
+        const response = await axios.get("http://localhost:8080/mydashboard", {
           headers: {
             Authorization: "Bearer " + token,
           },
         });
-
 
         setSession(response.data);
       } catch (error) {
@@ -38,6 +50,7 @@ function Dashboard() {
     };
     login();
   }, []);
+
 
   if (!session) {
     return (
@@ -62,23 +75,26 @@ function Dashboard() {
     <main className="dashboard">
       <h1 className="dashboard__title">Dashboard</h1>
 
-      <p>
-        Welcome back, {session.name} 
-      </p>
+      <nav className="dashboard__nav">
+        <div>
+          <p>Welcome back, {session.name}</p>
+        </div>
+        <div className="dashboard__buttons">
+          <p className="dashboard__item" onClick={handleClickRelative}>My Relatives</p>
+          <p className="dashboard__item" onClick={handleClickList}>My List</p>
+          <button className="dashboard__logout" onClick={logout}>
+            Log out
+          </button>
+        </div>
+      </nav>
 
-      <h2>My Profile</h2>
-      <p>Email: {session.email}</p>
-      <p>UserID: {session.id}</p>
+      {isRelativeClicked && <MyRelative />}
+      {isListClicked && <MyList id={session.id}/>}
 
-      <h2>Show My List</h2>
 
-      <button className="dashboard__logout" onClick={logout}>
-        Log out
-      </button>
-
-      <div>
+      {/* <div>
         <Link to="/login">Log in</Link>
-      </div>
+      </div> */}
       {/* {session.role === "admin" && (
         <div>
           <Link to="/admin">Go to Admin page</Link>
