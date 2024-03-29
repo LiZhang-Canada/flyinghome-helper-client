@@ -14,13 +14,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-items: stretch;
     margin: 2rem;
 
     &__item {
         list-style: none;
-        width: 50%;
+        width: calc(50% - 1rem);
 
         @include tablet{
             width: calc(33% - 1rem);
@@ -29,6 +29,17 @@
         @include desktop{
             width: calc(25% - 1rem);
         }
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); // a subtle shadow
+        border-radius: 8px; // rounded corners
+        background-color: $secondaryColorOne; // white background for the cards
+        margin-bottom: 1rem;
     }
 
     &__img {

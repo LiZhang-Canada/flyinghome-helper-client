@@ -26,14 +26,14 @@ function MyRelative(){
 
                 return (
                     <ul className="myrelative">
-                        <li className="myrelative__item">
-                            <p className="myrelative__email">EMAIL</p>
-                            <p>Relationship</p>
+                        <li className="myrelative__item myrelative__title">
+                            <p className="myrelative__column ">EMAIL</p>
+                            <p className="myrelative__column">Relationship</p>
                         </li>
                      {relatives.map((item) => (
                         <li key={item.id} className="myrelative__item">
-                            <p className="myrelative__email">{item.email}</p>
-                            <p>{item.relationship}</p>
+                            <p className="myrelative__column myrelative__column--long">{item.email}</p>
+                            <p className="myrelative__column">{item.relationship}</p>
                         </li>
                      ))}
                     </ul>

@@ -56,24 +56,26 @@ function HealthSupplementDetailPage() {
   } = activeHealthSupplement;
 
   return (
-    <div>
-      <img src={image} alt={item_name}></img>
+    <div className="healthsupplement-detail">
+      <img src={image} alt={item_name} className="healthsupplement-detail__img" />
       <div className="add-cart-wrapper">
         <div className="add-cart-wrapper__quantity">
           <img src={minus} alt="minus" className="add-cart-wrapper__icon" onClick={handleMinus}/>
           <input type="text" className="add-cart-wrapper__input" placeholder={quantity} name="quantity"/>
           <img src={add} alt="add" className="add-cart-wrapper__icon" onClick={handleAdd}/>
         </div>
-        <button className="add-cart-wrapper__button" onClick={handleSubmit}>Add to Cart</button>
+        <button className="add-cart-wrapper__button" onClick={handleSubmit}>Add to Bag</button>
       </div>
-      <h2>function:</h2>
+      <div className="healthsupplement-detail__content">
+      <h2>Function:</h2>
       <p>{function_description}</p>
-      <h2>daily usage:</h2>
+      <h2>Daily Usage:</h2>
       <p>{daily_usage}</p>
       <h2>功能：</h2>
       <p>{function_in_Chinese}</p>
       <h2>用法用量：</h2>
       <p>{usage_in_Chinese}</p>
+      </div>
     </div>
   );
 }

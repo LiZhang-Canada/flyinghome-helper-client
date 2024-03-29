@@ -71,7 +71,7 @@ function MyList({ id }) {
             <tr>
               <th>Img</th>
               <th>Item Name</th>
-              <th>Total Quantity</th>
+              <th>Quantity</th>
               <th>Done</th>
             </tr>
           </thead>

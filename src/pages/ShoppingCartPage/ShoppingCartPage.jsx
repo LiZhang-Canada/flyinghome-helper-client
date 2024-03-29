@@ -100,13 +100,14 @@ function ShoppingCartPage() {
   return (
     <form className="shopping-cart-wrapper" onSubmit={handleConfirm}>
       <div className="shopping-cart-wrapper__title">
-        <p>Image</p>
-        <p>Quantity</p>
+        <p className="shopping-cart-wrapper__imgwrapper">Image</p>
+        <span className="shopping-cart-wrapper__quantitywrapper">Quantity</span>
         {/* <p>Actions</p> */}
       </div>
       <ul className="shopping-cart-wrapper__list">
         {shoppingCart.map(({ newKey, value, img }, index) => (
           <li key={index} className="shopping-cart-wrapper__item">
+            <div>
             <Link to={`/healthsupplements/${newKey}`}>
               <img
                 src={img}
@@ -114,48 +115,30 @@ function ShoppingCartPage() {
                 className="shopping-cart-wrapper__img"
               />
             </Link>
-            <p>{value}</p>
-            {/* <div className="shopping-cart-wrapper__actions">
-              <img
-                src={minus}
-                alt="minus"
-                className="shopping-cart-wrapper__icon"
-              />
-              <input
-                type="text"
-                className="shopping-cart-wrapper__input"
-                placeholder={value}
-                name="quantity"
-              />
-              <img
-                src={add}
-                alt="add"
-                className="shopping-cart-wrapper__icon"
-              />
-            </div> */}
+            </div>
+            <span className="shopping-cart-wrapper__quantitywrapper">{value}</span>
           </li>
         ))}
       </ul>
       <div>
         <strong>From </strong>
         <input
-          type="text"
+          type="email"
           name="relation_email"
           placeholder="please input your email"
         ></input>
         <p>
-          <strong>Send to</strong>{" "}
+          <strong>Send to Buy</strong>{" "}
           <input
-            type="text"
+            type="email"
             name="user_email"
-            placeholder="please input the email you want to send the order list to"
+            placeholder="please input email you want to send to"
           />
-          to Buy
         </p>
         <button
-          className="shopping-cart-wrapper__cancel secondary-button "
+          className="secondary-button shopping-cart-wrapper__cancel "
           onClick={() => {
-            //   onCancel(); //close modal
+            navigate("/");
           }}
         >
           Cancel

@@ -3,18 +3,38 @@
 @use "../../styles//partials/global" as *;
 
 .myrelative{
+    width: 100%;
+    margin-top: 20px;
+
     &__item{
     display: flex;
     flex-direction: row;
-    justify-self: center;
-    margin: 1rem;
-    border: 1px solid $primaryColorTwo;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    
     // width: fit-content;
 }
 
- &__email{
-    padding-right: 1rem;
-    border-right: 1px solid $primaryColorTwo;
-    justify-self: center;
+&__title{
+    border-bottom: 1px solid $primaryColorTwo;
+    font-weight: 700;
+}
+
+ &__column{
+    padding: 10px;
+    margin: 5px;;
+    border: 1px solid $primaryColorTwo;
+    border-radius: 4px;
+    width: calc(50% - 10px);
+
+
+&--long{
+    width: calc(70% - 2px);
+    @include tablet{
+        width: calc(50% - 10px);
+    }
+}
  }
 }

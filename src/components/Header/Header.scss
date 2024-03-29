@@ -23,10 +23,6 @@
   .header-logo-link {
     display: block;
     margin: 0 1rem;
-    @include tablet {
-      margin: 0 2rem;
-      // padding: 1.8rem 0;
-    }
     @include desktop {
       width: 48.25rem;
       margin: 0 auto;

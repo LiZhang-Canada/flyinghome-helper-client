@@ -4,35 +4,53 @@
 
 .shopping-cart-wrapper{
 
+  background-color: $secondaryColorOne; //  background
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px auto; // Center the form container
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 63rem;
+
+
     &__item, &__title{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    // width: 100%;
     }
+&__imgwrapper{
+  // width: 50%;
+  margin-right: 9rem;
+  font-weight: 700;
+}
+&__quantitywrapper{
+  // width: 50%;
+  font-weight: 700;
+}
+
     &__img{
         width: 40px;
         height: 40px;
+        margin-right: 12rem;
     }
 
-    &__actions{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        text-align: center;
-    }
-
-    &__icon{
-        width: 20px;
-        height: 20px;
-    }
-
-    &__input{
-        width: 2rem;
+    input[type="email"], input[type="text"] {
+      width: calc(100% - 10px); // Full width minus padding
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc; // Light grey border
+      border-radius: 4px;
+      box-sizing: border-box; // Include padding in width calculation
     }
 
     &__cancel{
-        width: 45%;
+        width: 45% !important;
         margin-right: 1rem;
     
         @include tablet {
@@ -44,7 +62,7 @@
         }
     }
     &__confirm{
-        width: 45%;
+        width: 45% !important;
         @include tablet {
           width: fit-content;
         }

@@ -77,12 +77,12 @@ const handleClickList = () => {
 
       <nav className="dashboard__nav">
         <div>
-          <p>Welcome back, {session.name}</p>
+          <p>Welcome back, <strong>{session.name}</strong></p>
         </div>
         <div className="dashboard__buttons">
           <p className="dashboard__item" onClick={handleClickRelative}>My Relatives</p>
           <p className="dashboard__item" onClick={handleClickList}>My List</p>
-          <button className="dashboard__logout" onClick={logout}>
+          <button className="dashboard__item dashboard__logout" onClick={logout}>
             Log out
           </button>
         </div>

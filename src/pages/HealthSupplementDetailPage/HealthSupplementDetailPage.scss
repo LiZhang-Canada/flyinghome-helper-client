@@ -1,7 +1,28 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles//partials/mixins" as *;
 @use "../../styles//partials/global" as *;
+.healthsupplement-detail{
+    background-color: $secondaryColorOne; // Assuming a white background
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    // margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 63rem;
+    margin: 0 auto;
 
+    &__img{
+        width: 180px;
+        height: 180px;
+    }
+
+    &__content{
+        text-align: justify;
+        margin-top: 1rem;
+    }
+}
 .add-cart-wrapper{
     text-align: center;
     &__quantity{
@@ -18,12 +39,20 @@
         width: fit-content;
         text-align: center;
         font-weight: 700;
+        border-radius: 20px;
+        // border: none;
     }
     &__button{
         width: 10rem;
         border-radius: 20px;
         font-weight: 700;
-        padding: 1rem auto;
+        font-size: larger;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        background-color: $primaryColorTwo;
+        color: $primaryColorThree;
     }
 
 }

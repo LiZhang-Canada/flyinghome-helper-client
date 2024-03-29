@@ -31,9 +31,11 @@ function HealthSupplementsPage(){
         {items.map((item) => (
           
           <li key={item.id} className="items-list__item">
+            <div className="items-list__card">
             <Link to={`/healthsupplements/${item.id}`}>
                 <img src={item.img} alt={item.item_name} className="items-list__img"/>
             </Link>
+            </div>
           </li>
           
         ))}
