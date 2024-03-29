@@ -88,7 +88,7 @@ const handleClickList = () => {
         </div>
       </nav>
 
-      {isRelativeClicked && <MyRelative />}
+      {isRelativeClicked && <MyRelative id={session.id}/>}
       {isListClicked && <MyList id={session.id}/>}
 
 

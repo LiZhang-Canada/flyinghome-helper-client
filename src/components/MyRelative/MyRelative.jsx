@@ -2,14 +2,14 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 import './MyRelative.scss'
 
-function MyRelative(){
+function MyRelative({id}){
     const [relatives, setRelatives] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         const fetchRelatives = async () => {
           const baseUrl = "http://localhost:8080";
           try {
-            const response = await axios.get(`${baseUrl}/api/relatives`);
+            const response = await axios.get(`${baseUrl}/api/relatives/${id}`);
             setIsLoading(false);
             setRelatives(response.data);
           } catch (error) {
