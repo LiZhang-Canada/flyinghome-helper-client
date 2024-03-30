@@ -7,6 +7,7 @@
     min-height: 100vh;
     max-width: 63rem;
     margin: 0 auto;
+    position: relative;
 
     &__title {
         margin: 0 0 1rem;
@@ -19,7 +20,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        position: relative;
+
 
         @include tablet{
             flex-direction: row;
@@ -43,18 +44,16 @@
         margin-top: 0.5rem;
         background-color: $secondaryColorOne;
         text-align: center;
+        margin-right: 1rem;
     }
 
 
     &__logout {
         width: 80px;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 1rem;
+        top: 1rem;
         background-color: $primaryColorTwo;
         color: $primaryColorThree;
-        @include tablet{
-            position: unset;
-        }
     }
 }

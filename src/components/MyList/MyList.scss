@@ -2,7 +2,27 @@
 @use "../../styles//partials/mixins" as *;
 @use "../../styles//partials/global" as *;
 
+@keyframes scaleUp {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(1.5);
+    }
+  }
+
 .table{
+
+    &__wrapper{
+        width: 100%;
+        text-align: justify;
+
+        &--relative{
+            width: 100%;
+            text-align: justify;
+        }
+    }
 
 
     &__img{
@@ -17,4 +37,20 @@
     &__itemdone{
         text-decoration: line-through;
     }
+
+    &__header{
+        background-color: $secondaryColorTwo;
+    }
+    &__name{
+        width: 74%;
+    }
+    &__quantity{
+        text-align: center;
+        font-weight: 700;
+        width: 20%;
+    }
+}
+
+img:hover{
+    animation: scaleUp 1.5s forwards;
 }

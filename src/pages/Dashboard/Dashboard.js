@@ -11,7 +11,7 @@ function Dashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const { session, setSession } = useContext(AuthContext);
   const [isRelativeClicked, setIsRelativeClicked] = useState(false);
-  const [isListClicked, setIsListClicked] = useState(false);
+  const [isListClicked, setIsListClicked] = useState(true);
 
   const logout = () => {
     sessionStorage.removeItem("token");
@@ -74,7 +74,9 @@ const handleClickList = () => {
   return (
     <main className="dashboard">
       <h1 className="dashboard__title">Dashboard</h1>
-
+      <button className="dashboard__item dashboard__logout" onClick={logout}>
+            Log out
+      </button>
       <nav className="dashboard__nav">
         <div>
           <p>Welcome back, <strong>{session.name}</strong></p>
@@ -82,9 +84,7 @@ const handleClickList = () => {
         <div className="dashboard__buttons">
           <p className="dashboard__item" onClick={handleClickRelative}>My Relatives</p>
           <p className="dashboard__item" onClick={handleClickList}>My List</p>
-          <button className="dashboard__item dashboard__logout" onClick={logout}>
-            Log out
-          </button>
+
         </div>
       </nav>
 

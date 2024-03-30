@@ -18,7 +18,7 @@ function MyRelative({id}){
           }
         };
         fetchRelatives();
-      }, []);
+      }, [id]);
 
       if (isLoading) {
         return <p>Loading...</p>;
@@ -26,9 +26,9 @@ function MyRelative({id}){
 
                 return (
                     <ul className="myrelative">
-                        <li className="myrelative__item myrelative__title">
-                            <p className="myrelative__column ">EMAIL</p>
-                            <p className="myrelative__column">Relationship</p>
+                        <li className="myrelative__titlewrapper">
+                            <p className="myrelative__title ">EMAIL</p>
+                            <p className="myrelative__title">Relationship</p>
                         </li>
                      {relatives.map((item) => (
                         <li key={item.id} className="myrelative__item">

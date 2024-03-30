@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./ShoppingCartPage.scss";
-import add from "../../assets/images/add.svg";
-import minus from "../../assets/images/minus.svg";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
