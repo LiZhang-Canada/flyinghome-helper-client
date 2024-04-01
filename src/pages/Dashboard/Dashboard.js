@@ -91,15 +91,6 @@ const handleClickList = () => {
       {isRelativeClicked && <MyRelative id={session.id}/>}
       {isListClicked && <MyList id={session.id}/>}
 
-
-      {/* <div>
-        <Link to="/login">Log in</Link>
-      </div> */}
-      {/* {session.role === "admin" && (
-        <div>
-          <Link to="/admin">Go to Admin page</Link>
-        </div>
-      )} */}
     </main>
   );
 }

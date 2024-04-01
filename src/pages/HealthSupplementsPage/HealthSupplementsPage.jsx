@@ -7,6 +7,7 @@ function HealthSupplementsPage(){
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
+      document.title = "Healthsupplements | Flyinghome Helper";
       const fetchItems = async () => {
         const baseUrl = "http://localhost:8080";
         try{

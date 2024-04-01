@@ -7,7 +7,7 @@ import Input from "../../components/Input/Input";
 function Signup() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
-
+  document.title = "Signup | Flyinghome Helper";
   const handleSubmit = async (event) => {
     event.preventDefault();
 

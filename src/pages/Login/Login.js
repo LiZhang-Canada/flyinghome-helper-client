@@ -28,6 +28,7 @@ function Login() {
   };
 
   useEffect(() => {
+    document.title = "Login | Flyinghome Helper";
     if (session) {
       navigate("/mydashboard");
     }

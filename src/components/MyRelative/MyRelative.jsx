@@ -6,6 +6,7 @@ function MyRelative({id}){
     const [relatives, setRelatives] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
+        document.title = "My Relative| Flyinghome Helper";
         const fetchRelatives = async () => {
           const baseUrl = "http://localhost:8080";
           try {

@@ -23,7 +23,7 @@ a {
 }
 
 body {
-  background-color: $lightgrey;
+  background-color: $primaryColorFour;
   font-family: 'Titillium';
 }
 
@@ -33,7 +33,7 @@ h1 {
   font-size: 1.75rem;
   line-height: 2.25rem;
   font-weight: 600;
-  color: $black;
+  color: $primaryColorFive;
 
   @include tablet {
     font-size: 2rem;
@@ -82,7 +82,7 @@ h3 {
 h4 {
   font-size: .6875rem;
   line-height: 1rem;
-  color: $slate;
+  color: $primaryColorSix;
 
   @include tablet {
     font-size: .75rem;
@@ -115,7 +115,7 @@ h4 {
 .p2 {
   font-size: .8125rem;
   line-height: 1.25rem;
-  color: $black;
+  color: $primaryColorFive;
 
   @include tablet {
     font-size: .875rem;
@@ -145,41 +145,11 @@ h4 {
 
 //buttons
 
-.primary-button {
-  background-color: $indigo;
-  color: $white;
-  height: 2.25rem;
-  border: none;
-  border-radius: 1.25rem;
-  text-align: center;
-  padding: .4375rem 1rem;
-  font-size: .8125rem;
-  font-weight: 600;
-  width: 100%;
-
-  @include tablet {
-    height: 2.375rem;
-    font-size: .875rem;
-    width: auto;
-  }
-
-  @include desktop {
-    height: 2.375rem;
-    font-size: .875rem;
-    width: auto;
-    width: auto;
-  }
-
-  &:hover {
-    background-color: $black;
-  }
-}
-
 .secondary-button {
-  background-color: $white;
-  color: $slate;
+  background-color: $primaryColorThree;
+  color: $primaryColorSix;
   height: 2.25rem;
-  border: .0625rem solid $cloud;
+  border: .0625rem solid $primaryColorTwo;
   border-radius: 1.25rem;
   text-align: center;
   padding: .4375rem 1rem;
@@ -200,15 +170,15 @@ h4 {
   }
 
   &:hover {
-    background-color: $white;
-    color: $indigo;
-    border: .0625rem solid $indigo;
+    background-color: $primaryColorThree;
+    color: $primaryColorTwo;
+    border: .0625rem solid $primaryColorTwo;
   }
 }
 
 .confirm-button {
   background-color: $primaryColorTwo;
-  color: $white;
+  color: $primaryColorThree;
   height: 2.25rem;
   border: none;
   border-radius: 1.25rem;
@@ -233,165 +203,6 @@ h4 {
   }
 
   &:hover {
-    background-color: $black;
-  }
-}
-
-//input boxes
-
-.form-input {
-  height: 2.25rem;
-  width: 100%;
-  background-color: $white;
-  border: .0625rem solid $cloud;
-  border-radius: 1.25rem;
-  padding: .625rem 1rem;
-
-  @include tablet {
-    height: 2.375rem;
-  }
-
-  @include desktop {
-    height: 2.375rem;
-  }
-
-  &:focus {
-    border-color: $indigo;
-    outline: none;
-    border-color: $indigo;
-
-    &::placeholder {
-      color: $black;
-    }
-  }
-
-  &--error-state {
-    border-color: $red;
-  }
-}
-
-::placeholder {
-  color: $slate;
-}
-
-//in and out of stock labels
-
-.in-stock {
-  color: $green;
-  background-color: #15846312;
-  text-transform: uppercase;
-  border-radius: 1.25rem;
-  height: 1.5rem;
-  text-align: center;
-  padding: .25rem 1rem;
-  display: inline-block;
-  width: 75%;
-  @include tablet {
-    height: 1.625rem;
-    max-width: 5.9375rem;
-    min-width: 5.9375rem;
-  }
-}
-
-.out-of-stock {
-  color: $red;
-  background-color: #c9451512;
-  text-transform: uppercase;
-
-  border-radius: 1.25rem;
-  height: 1.5rem;
-  text-align: center;
-  padding-top: .25rem;
-  display: inline-block;
-
-  @include tablet {
-    height: 1.625rem;
-    max-width: 7.5rem;
-    min-width: 7.5rem;
-  }
-}
-
-
-// Page Title Section Styles
-.page-title-section {
-  background-color: #ffffff;
-    position: absolute;
-    top: 6.6875rem;
-    left: 49.5%;
-    margin-left: -43%;
-    width: 87%;
-    min-width: 18.375rem;
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-    border-bottom: .0625rem solid $cloud;
-    border-radius: 0.125rem;
-    box-shadow: 0 -0.0625rem .25rem 0 $cloud;
-
-  @include tablet {
-    flex-direction: row;
-    padding: 1.29rem 1.5rem;
-    justify-content: space-between;
-    border-bottom: none;
-  }
-  @include desktop {
-    width: 63rem;
-    margin-left: -31.125rem;
-  }
-}
-
-.page-title-short {
-  background-color: #ffffff;
-    position: absolute;
-    top: 6.6875rem;
-    left: 49.5%;
-    margin-left: -43%;
-    width: 87%;
-    min-width: 18.375rem;
-    display: flex;
-    flex-direction: row;
-    padding: 1.5rem;
-    border-bottom: .0625rem solid $cloud;
-    border-radius: .125rem;
-    box-shadow: 0 -0.0625rem .25rem 0 $cloud;
-
-  @include tablet {
-    flex-direction: row;
-    padding: 1.29rem 1.5rem;
-    justify-content: space-between;
-    border-bottom: none;
-  }
-  @include desktop {
-    width: 63rem;
-    margin-left: -31.125rem;
-  }
-}
-
-// Main Contents Section Styles (container for ul)
-.main-contents-section{
-  margin-top: 8.1875rem;
-  width: 87%;
-  background-color: #ffffff;
-  box-shadow: 0 .125rem .3125rem 0 $cloud;
-  border-radius: 0.225rem;
-  @include tablet{
-    margin-top: -0.0625rem;
-  }
-  @include desktop{
-    width: 63rem;
-  }
-}
-
-.main-section-short-title{
-  margin-top: 1.8125rem;
-  width: 87%;
-  background-color: #ffffff;
-  box-shadow: 0 .125rem .3125rem 0 $cloud;
-  border-radius: .225rem;
-  @include tablet{
-    margin-top: -0.0625rem;
-  }
-  @include desktop{
-    width: 63rem;
+    background-color: $primaryColorFive;
   }
 }

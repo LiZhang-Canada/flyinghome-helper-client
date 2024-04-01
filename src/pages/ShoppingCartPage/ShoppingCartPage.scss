@@ -22,31 +22,28 @@
     align-items: center;
     padding: 0.5rem 0;
     border-bottom: 1px solid #eee;
-    // width: 100%;
     }
 &__imgwrapper{
-  // width: 50%;
   margin-right: 9rem;
   font-weight: 700;
 }
 &__quantitywrapper{
-  // width: 50%;
   font-weight: 700;
 }
 
     &__img{
-        width: 40px;
-        height: 40px;
+        width: 2.5rem;
+        height: 2.5rem;
         margin-right: 12rem;
     }
 
     input[type="email"], input[type="text"] {
-      width: calc(100% - 10px); // Full width minus padding
-      margin: 10px 0;
-      padding: 10px;
-      border: 1px solid #ccc; // Light grey border
-      border-radius: 4px;
-      box-sizing: border-box; // Include padding in width calculation
+      width: calc(100% - 10px); 
+      margin: 0.625rem 0;
+      padding: 0.625rem;
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+      box-sizing: border-box; 
     }
 
     &__cancel{
@@ -72,4 +69,9 @@
         }
     }
 
+}
+
+.error-message{
+  color: red;
+  font-weight: 700;
 }

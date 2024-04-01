@@ -10,9 +10,9 @@ function ShoppingCartPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
-  //   const [value, setValue] = useState(0);
 
   useEffect(() => {
+    document.title = "ShoppingBag| Flyinghome Helper";
     const fetchItems = async () => {
       const baseUrl = "http://localhost:8080";
       try {
@@ -46,7 +46,6 @@ function ShoppingCartPage() {
 
   function handleConfirm(event) {
     event.preventDefault();
-    // console.log(event.target);
 
     // Validation
     if (
@@ -63,14 +62,12 @@ function ShoppingCartPage() {
       order_list: shoppingCart,
     };
 
-    // console.log(postData);
-
     axios
       .post("http://localhost:8080/api/shoppinglist", postData)
       .then((response) => {
         setErrorMessage("Order List added successfully");
         console.log("Response:", response.data);
-        //remove all the item keys
+        //remove all the item keys except token
         const keysToRemove = [];
         for (let i = 0; i < sessionStorage.length; i++) {
           const key = sessionStorage.key(i);
@@ -100,7 +97,6 @@ function ShoppingCartPage() {
       <div className="shopping-cart-wrapper__title">
         <p className="shopping-cart-wrapper__imgwrapper">Image</p>
         <span className="shopping-cart-wrapper__quantitywrapper">Quantity</span>
-        {/* <p>Actions</p> */}
       </div>
       <ul className="shopping-cart-wrapper__list">
         {shoppingCart.map(({ newKey, value, img }, index) => (

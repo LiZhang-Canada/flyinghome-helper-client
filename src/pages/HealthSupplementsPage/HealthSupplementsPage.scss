@@ -36,18 +36,18 @@
         flex-direction: column;
         align-items: center;
         padding: 5px;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); // a subtle shadow
-        border-radius: 8px; // rounded corners
-        background-color: $secondaryColorOne; // white background for the cards
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); 
+        border-radius: 8px;
+        background-color: $secondaryColorOne; 
         margin-bottom: 1rem;
     }
 
     &__img {
-        width: 120px;
-        height: 120px;
+        width: 6rem;
+        height: 6rem;
     @include tablet{
-        width: 160px;
-        height: 160px;
+        width: 10rem;
+        height: 10rem;
     }
     }
 }

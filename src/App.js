@@ -12,23 +12,26 @@ import AuthProvider from "./context/auth-context";
 function App() {
   return (
     <div className="App">
-            <AuthProvider>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<HealthSupplementsPage />} />
-          <Route path="/healthsupplements" element={<HealthSupplementsPage />} />
-          <Route path="/healthsupplements/:id" element={<HealthSupplementDetailPage />} />
-          <Route path="/shoppingcart" element={<ShoppingCartPage />} />
+      <AuthProvider>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<HealthSupplementsPage />} />
+            <Route
+              path="/healthsupplements"
+              element={<HealthSupplementsPage />}
+            />
+            <Route
+              path="/healthsupplements/:id"
+              element={<HealthSupplementDetailPage />}
+            />
+            <Route path="/shoppingcart" element={<ShoppingCartPage />} />
 
-
-          <Route path="/mydashboard" element={<Dashboard />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-
-        </Routes>
-        {/* <Footer /> */}
-      </BrowserRouter>
+            <Route path="/mydashboard" element={<Dashboard />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </BrowserRouter>
       </AuthProvider>
     </div>
   );

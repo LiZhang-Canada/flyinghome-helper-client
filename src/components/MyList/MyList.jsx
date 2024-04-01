@@ -42,6 +42,7 @@ function MyList({ id }) {
       };
 
   useEffect(() => {
+    document.title = "My List| Flyinghome Helper";
     const fetchLists = async () => {
       const baseUrl = "http://localhost:8080";
       try {

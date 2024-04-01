@@ -36,7 +36,6 @@
   }
 
   &__nav {
-    // min-width: 15rem;
     height: 3rem;
     @include tablet {
       min-width: 0;
@@ -51,48 +50,4 @@
 
   }
 
-  .header-list {
-    @include flex-center;
-
-    &__item {
-      width: 50%;
-      text-align: center;
-      height: 1.75rem;
-      line-height: 1.75rem;
-
-      @include tablet {
-        width: auto;
-        height: 2.1875rem;
-        line-height: 2.1875rem;
-      }
-    }
-
-    &__link {
-      font-size: 0.6875rem;
-      display: block;
-      color: $cloud;
-      width: 80%;
-      height: 1.75rem;
-      margin: 1rem auto;
-      border-radius: 1.25rem;
-
-      @include tablet {
-        font-size: 0.8125rem;
-        margin: 1.8rem 0 0 0;
-        width: auto;
-        padding: 0 0.9375rem;
-        height: 2.1875rem;
-      }
-
-      &--active {
-        color: $white;
-        background-color: $black;
-      }
-
-      &:hover {
-        color: $white;
-        text-decoration: underline $lightgrey;
-      }
-    }
-  }
 }

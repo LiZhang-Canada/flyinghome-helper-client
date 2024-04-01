@@ -3,20 +3,20 @@ Flyinghome Helper
 
 ## Overview
 
-For new immigrants, when flying home, it can help them take gifts (health supplements) for relatevies in home country.
+For new immigrants, when flying home, it can help them take gifts (health supplements) for relatives in home country.
  
 ### Problem
 
-For Costco health supplements, such cs Calcium, VC, etc, expect these basic ones, I don’t know the functions of them, which is good for heart, which is good for bone. Each time, if I need buy some for relatives in my home country, I researched the functions on the website for each of them. And later for a while, I forgot totally. Also, for seniors in my home country, they can’t read English when they get the health supplements and don’t know the daily usage. 
+For Costco health supplements, such cs Calcium, VC, etc, expect these basic ones, I don’t know the functions of them, which is good for heart, which is good for eye. Each time, if I need buy some for relatives in my home country, I researched the functions on the website for each of them. And later for a while, I forgot totally. Also, for seniors in my home country, they can’t read English when they get the health supplements and don’t know the dosage. 
 
 ### User Profile
-- my relatives can check the functions and daily usage by themselves in Chinese
+- My relatives can check the functions and daily usage by themselves in Chinese
 - if they want me take something when I back to home country, they can send me health supplements lists directly
 - I can get a total sum for each of item and buy in Costco
 
 ### Features
 **user here means my relatives**
-- As a user, I can see a list of health supplements (advanced: can filter by function area: heart/bone/..., also filter by senior/kid/men/women)
+- As a user, I can see a list of health supplements (advanced: can filter by function area: heart/bone/eye..., also filter by senior/kid/men/women)
 - As a user, I can click each item image, check the functions and daily usage
 - As a user, if I click "translate into Chinese", I can check the functions and daily usage in Chinese
 - As a user, I can add item into order cart
@@ -62,15 +62,16 @@ For Costco health supplements, such cs Calcium, VC, etc, expect these basic ones
 
 ### Endpoints
 
-**GET /healthSupplements**
-**GET /healthSupplements/:id**
+**GET /api/healthsupplements**
+**GET /api/healthsupplements/:id**
 
-**POST /users/register**
-**POST /users/login**
+**POST /auth/register**
+**POST /auth/login**
 
-**POST /list**
-**GET /list**
+**POST /api/shoppinglist**
+**GET /api/shoppinglist/:id**
 
+**GET /api/relatives/:id**
 
 
 ## Roadmap
@@ -83,7 +84,7 @@ For Costco health supplements, such cs Calcium, VC, etc, expect these basic ones
 
 - Create migrations
 
-- Gather 20 sample health supplements (img, name, function, daily usage,function in Chinese, daily usage in Chinese )
+- Gather some sample health supplements (img, name, function, daily usage,function in Chinese, daily usage in Chinese )
 
 - Create seeds with sample health supplements
 - Feature Implementation
@@ -92,10 +93,10 @@ For Costco health supplements, such cs Calcium, VC, etc, expect these basic ones
 - DEMO DAY
 
 ## Nice-to-haves
-- filter by different option for the list view
+- filter by different option for the healthsupplements home page
 - logged in user can add new health supplements
 - Forgot password functionality
-
-- 
-
+- Manage Relatives (add new relative, edit existing relative, delete existing relative)
+- Add additional table for item to translated text which can support different country languages
+- When ralatives send the order list, can send a mail to them for the order detail
 
