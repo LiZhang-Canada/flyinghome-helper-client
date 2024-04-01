@@ -100,3 +100,28 @@ For Costco health supplements, such cs Calcium, VC, etc, expect these basic ones
 - Add additional table for item to translated text which can support different country languages
 - When ralatives send the order list, can send a mail to them for the order detail
 
+## Installation Instruction
+
+### Backend part:
+
+npm i
+
+Following .env.sample to create .env file, within it:
+JWT_KEY could be generated as below:
+To generate a secret key you can run this line of code in the Terminal: 
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'));"
+
+CREATE DATABASE flyinghomehelper
+    DEFAULT CHARACTER SET = 'utf8mb4';
+USE flyinghomehelper;
+
+npm run migrate
+npm run seed
+
+npm start
+
+
+### Front-End:
+
+npm i
+npm start
